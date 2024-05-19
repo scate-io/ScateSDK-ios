@@ -1,0 +1,64 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ScateSDK
+import AdSupport
+import AppTrackingTransparency
+import Foundation
+import LocalAuthentication
+@_exported import ScateSDK
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ScateCoreSDK : ObjectiveC.NSObject {
+  @objc public static var debug: Swift.Bool
+  @objc public static func Init(gameID: Swift.String)
+  public static func CurrentTimestamp() -> Swift.UInt64
+  @objc public static func Event(name: Swift.String, customValue: Swift.String?)
+  @objc public static func Event(name: Swift.String, startTime: Swift.UInt64, endtime: Swift.UInt64, customValue: Swift.String?)
+  @objc public static func Event(name: Swift.String)
+  public static func SetAdid(adid: Swift.String)
+  public static func GetAdid() -> Swift.String?
+  public static func GetUserID() -> Swift.String?
+  public static func GetInstallTime() -> Swift.UInt64?
+  public static func GetGameID() -> Swift.String?
+  @objc deinit
+}
+public typealias ulid_t = Foundation.uuid_t
+public struct ULID : Swift.Hashable, Swift.Equatable, Swift.Comparable, Swift.CustomStringConvertible {
+  public var ulid: (Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8) {
+    get
+  }
+  public init(ulid: ScateSDK.ulid_t)
+  public init?(ulidData data: Foundation.Data)
+  public init?(ulidString string: Swift.String)
+  public init?(timestamp: Foundation.Date = Date(), randomPartData data: Foundation.Data)
+  public init<T>(timestamp: Foundation.Date, generator: inout T) where T : Swift.RandomNumberGenerator
+  public init(timestamp: Foundation.Date = Date())
+  public var ulidData: Foundation.Data {
+    get
+  }
+  public var ulidString: Swift.String {
+    get
+  }
+  public var timestamp: Foundation.Date {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: ScateSDK.ULID, rhs: ScateSDK.ULID) -> Swift.Bool
+  public static func < (lhs: ScateSDK.ULID, rhs: ScateSDK.ULID) -> Swift.Bool
+  public var description: Swift.String {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ScateSDK.ULID : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension UIKit.UIDevice.BatteryState : Swift.Codable {
+}
