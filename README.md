@@ -8,7 +8,7 @@ Add following into your Podfile:
     pod 'ScateSDK'
 ```
 
-Example:
+Example `Podfile`:
 
 ```ruby
     target 'YourApp' do
