@@ -37,7 +37,6 @@ struct ScateSDKTestApp: App {
         // It's better to initialize the SDK after Adjust SDK 
 
         ScateCoreSDK.Init(appID: "<your app ID>");
-        ScateCoreSDK.SetA(appID: "<your app ID>");
         // make sure to set adid from Adjust SDK
         let adid = Adjust.adid()
         ScateCoreSDK.SetAdid(adid: adid);
