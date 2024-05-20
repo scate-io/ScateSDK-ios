@@ -16,10 +16,6 @@
 		<data>
 		W+aYL3OJjybhZLyg4LKnWPPdeHw=
 		</data>
-		<key>Modules/ScateSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
-		<data>
-		KqsmVP6IoBvs+hd2GLWJbSjP1Oc=
-		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
 		dhPj8GP7Ioxx4LnYvuTOkYX4TAU=
@@ -38,7 +34,7 @@
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		DEcvV5u1Kftq8/r7zep0MWXFAH4=
+		oUz01WJnOVIBuvG87LlQD8rM6rI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,13 +55,6 @@
 			<key>hash2</key>
 			<data>
 			lYve9ICKkDtv6dHf6z+LTQpASaPJCXQht1lTVyAE3IY=
-			</data>
-		</dict>
-		<key>Modules/ScateSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Ihxmx7784KMXGLYz/QHQgPr+7eDv4lRxYK/pUZZUqB0=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -100,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GpSeQCtO0WrGSUUDIb6USy772wytAjpekU5kdWwv3P8=
+			+g0xxnixj3RiK0qsxz5Ae+5yhP4rNcPv4HrkIkexWUY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
