@@ -8,6 +8,14 @@ Add following into your Podfile:
     pod 'ScateSDK'
 ```
 
+Example:
+
+```ruby
+    target 'YourApp' do
+        use_frameworks!
+        pod 'ScateSDK'
+    end
+```
 
 
 Install the pod:
