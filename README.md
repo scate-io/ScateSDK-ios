@@ -27,7 +27,7 @@ Install the pod:
 
 #### Usage
 
-### Initialize SDK
+### Initialize the SDK
 
 In your AppDelegate.swift file, import the ScateSDK module and initialize the SDK with your app ID in the `application(_:didFinishLaunchingWithOptions:)` method: or `init()` method of your main struct if you are using SwiftUI.
 
