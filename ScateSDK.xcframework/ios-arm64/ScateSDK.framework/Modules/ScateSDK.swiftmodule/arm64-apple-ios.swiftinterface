@@ -14,7 +14,7 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ScateCoreSDK : ObjectiveC.NSObject {
   @objc public static var debug: Swift.Bool
-  @objc public static func Init(gameID: Swift.String)
+  @objc public static func Init(appID: Swift.String)
   public static func CurrentTimestamp() -> Swift.UInt64
   @objc public static func Event(name: Swift.String, customValue: Swift.String?)
   @objc public static func Event(name: Swift.String, startTime: Swift.UInt64, endtime: Swift.UInt64, customValue: Swift.String?)
@@ -23,7 +23,7 @@ import _SwiftConcurrencyShims
   public static func GetAdid() -> Swift.String?
   public static func GetUserID() -> Swift.String?
   public static func GetInstallTime() -> Swift.UInt64?
-  public static func GetGameID() -> Swift.String?
+  public static func GetAppID() -> Swift.String?
   @objc deinit
 }
 public typealias ulid_t = Foundation.uuid_t

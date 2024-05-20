@@ -307,7 +307,7 @@ SWIFT_CLASS("_TtC8ScateSDK12ScateCoreSDK")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debug;)
 + (BOOL)debug SWIFT_WARN_UNUSED_RESULT;
 + (void)setDebug:(BOOL)value;
-+ (void)InitWithGameID:(NSString * _Nonnull)gameID;
++ (void)InitWithAppID:(NSString * _Nonnull)appID;
 + (void)EventWithName:(NSString * _Nonnull)name customValue:(NSString * _Nullable)customValue;
 + (void)EventWithName:(NSString * _Nonnull)name startTime:(uint64_t)startTime endtime:(uint64_t)endtime customValue:(NSString * _Nullable)customValue;
 + (void)EventWithName:(NSString * _Nonnull)name;

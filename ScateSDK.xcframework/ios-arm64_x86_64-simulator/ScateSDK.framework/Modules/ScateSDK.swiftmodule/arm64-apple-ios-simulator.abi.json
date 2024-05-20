@@ -169,7 +169,7 @@
           {
             "kind": "Function",
             "name": "Init",
-            "printedName": "Init(gameID:)",
+            "printedName": "Init(appID:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -184,11 +184,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@ScateSDK@objc(cs)ScateCoreSDK(cm)InitWithGameID:",
-            "mangledName": "$s8ScateSDK0a4CoreB0C4Init6gameIDySS_tFZ",
+            "usr": "c:@M@ScateSDK@objc(cs)ScateCoreSDK(cm)InitWithAppID:",
+            "mangledName": "$s8ScateSDK0a4CoreB0C4Init5appIDySS_tFZ",
             "moduleName": "ScateSDK",
             "static": true,
-            "objc_name": "InitWithGameID:",
+            "objc_name": "InitWithAppID:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -472,8 +472,8 @@
           },
           {
             "kind": "Function",
-            "name": "GetGameID",
-            "printedName": "GetGameID()",
+            "name": "GetAppID",
+            "printedName": "GetAppID()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -491,8 +491,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8ScateSDK0a4CoreB0C9GetGameIDSSSgyFZ",
-            "mangledName": "$s8ScateSDK0a4CoreB0C9GetGameIDSSSgyFZ",
+            "usr": "s:8ScateSDK0a4CoreB0C8GetAppIDSSSgyFZ",
+            "mangledName": "$s8ScateSDK0a4CoreB0C8GetAppIDSSSgyFZ",
             "moduleName": "ScateSDK",
             "static": true,
             "declAttributes": [
@@ -1735,14 +1735,14 @@
     {
       "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/ScateCoreSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 759,
+      "offset": 758,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/ScateCoreSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 818,
+      "offset": 817,
       "length": 5,
       "value": "false"
     },
