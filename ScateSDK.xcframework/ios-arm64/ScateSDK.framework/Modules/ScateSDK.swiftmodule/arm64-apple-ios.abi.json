@@ -1587,13 +1587,6 @@
         "moduleName": "ScateSDK"
       },
       {
-        "kind": "Import",
-        "name": "AppTrackingTransparency",
-        "printedName": "AppTrackingTransparency",
-        "declKind": "Import",
-        "moduleName": "ScateSDK"
-      },
-      {
         "kind": "TypeDecl",
         "name": "BatteryState",
         "printedName": "BatteryState",
