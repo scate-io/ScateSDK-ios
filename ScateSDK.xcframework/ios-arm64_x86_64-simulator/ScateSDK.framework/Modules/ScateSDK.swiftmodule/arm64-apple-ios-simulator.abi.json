@@ -52,6 +52,107 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "RemoteConfigHelper",
+        "printedName": "RemoteConfigHelper",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fetchRemoteConfigs",
+            "printedName": "fetchRemoteConfigs(remoteConfigData:retryCount:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RemoteConfigData",
+                "printedName": "ScateSDK.RemoteConfigData",
+                "usr": "s:8ScateSDK16RemoteConfigDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8ScateSDK18RemoteConfigHelperC05fetchC7Configs06remoteD4Data10retryCountyAA0cdI0V_SitF",
+            "mangledName": "$s8ScateSDK18RemoteConfigHelperC05fetchC7Configs06remoteD4Data10retryCountyAA0cdI0V_SitF",
+            "moduleName": "ScateSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadConfigsFromLocal",
+            "printedName": "loadConfigsFromLocal()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8ScateSDK18RemoteConfigHelperC20loadConfigsFromLocalSDyS2SGSgyF",
+            "mangledName": "$s8ScateSDK18RemoteConfigHelperC20loadConfigsFromLocalSDyS2SGSgyF",
+            "moduleName": "ScateSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8ScateSDK18RemoteConfigHelperC",
+        "mangledName": "$s8ScateSDK18RemoteConfigHelperC",
+        "moduleName": "ScateSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ScateSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -63,6 +164,59 @@
         "name": "ScateCoreSDK",
         "printedName": "ScateCoreSDK",
         "children": [
+          {
+            "kind": "Var",
+            "name": "RemoteConfigsReady",
+            "printedName": "RemoteConfigsReady",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ScateSDK@objc(cs)ScateCoreSDK(cpy)RemoteConfigsReady",
+            "mangledName": "$s8ScateSDK0a4CoreB0C18RemoteConfigsReadySo18NSNotificationNameavpZ",
+            "moduleName": "ScateSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ScateSDK@objc(cs)ScateCoreSDK(cm)RemoteConfigsReady",
+                "mangledName": "$s8ScateSDK0a4CoreB0C18RemoteConfigsReadySo18NSNotificationNameavgZ",
+                "moduleName": "ScateSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "debug",
@@ -493,6 +647,41 @@
             "declKind": "Func",
             "usr": "s:8ScateSDK0a4CoreB0C8GetAppIDSSSgyFZ",
             "mangledName": "$s8ScateSDK0a4CoreB0C8GetAppIDSSSgyFZ",
+            "moduleName": "ScateSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "GetRemoteConfig",
+            "printedName": "GetRemoteConfig(key:defaultValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8ScateSDK0a4CoreB0C15GetRemoteConfig3key12defaultValueS2S_SStFZ",
+            "mangledName": "$s8ScateSDK0a4CoreB0C15GetRemoteConfig3key12defaultValueS2S_SStFZ",
             "moduleName": "ScateSDK",
             "static": true,
             "declAttributes": [
@@ -1546,6 +1735,97 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "RemoteConfigData",
+        "printedName": "RemoteConfigData",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RemoteConfigData",
+                "printedName": "ScateSDK.RemoteConfigData",
+                "usr": "s:8ScateSDK16RemoteConfigDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8ScateSDK16RemoteConfigDataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s8ScateSDK16RemoteConfigDataV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ScateSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8ScateSDK16RemoteConfigDataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s8ScateSDK16RemoteConfigDataV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ScateSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8ScateSDK16RemoteConfigDataV",
+        "mangledName": "$s8ScateSDK16RemoteConfigDataV",
+        "moduleName": "ScateSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ScateSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -1726,18 +2006,81 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/RemoteConfigHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 306,
+      "length": 25,
+      "value": "\"https:\/\/api.scate.tech\/\""
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/RemoteConfigHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 377,
+      "length": 11,
+      "value": "\"v1\/config\""
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/RemoteConfigHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 421,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/RemoteConfigHelper.swift",
+      "kind": "FloatLiteral",
+      "offset": 466,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/RemoteConfigHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 504,
+      "length": 20,
+      "value": "\"ScateRemoteConfigs\""
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/RemoteConfigHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 619,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/ScateCoreSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 644,
+      "length": 26,
+      "value": "\"Scate_RemoteConfigsReady\""
+    },
+    {
       "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/ScateCoreSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 758,
+      "offset": 907,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/ScateCoreSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 817,
+      "offset": 968,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/ScateCoreSDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1027,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/NotificationNames.swift",
+      "kind": "StringLiteral",
+      "offset": 209,
+      "length": 28,
+      "value": "\"Scate_RemoteConfigsFetched\""
     },
     {
       "filePath": "\/Users\/eminkura\/Documents\/GitHub\/ScateSDK\/ScateSDK\/ScateTaskQueue.swift",

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ScateSDK-Swift.h</key>
 		<data>
-		MTZ4z/jpXxGlvDT1e8HedOuH2y8=
+		n6yE9PS78DT7Mm95ObnY5SvgAts=
 		</data>
 		<key>Headers/ScateSDK.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		jWBq08d9JTWZls9ajCwlGDd4SJc=
+		EjeEs/UxGX/DQFUYozw3/edYfJQ=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		kZDH8iZqP8/Hwr6TqB+sAPddDAE=
+		DSopPT/obQva9fxpq++gdGC3pi0=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		kZDH8iZqP8/Hwr6TqB+sAPddDAE=
+		DSopPT/obQva9fxpq++gdGC3pi0=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		i2upMTha/TxA2oz8FKMOqQyKUkA=
+		KOKCccnc8dK/KoKaNRDxBytjewU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YCQ7mhSqe3SFyQ9/e+BpkOXIvXA8xr54r6Nj1qRb24k=
+			NfCc0cwYOTTElfLP1XQU8YzjZqepA7OS55qJWSxR5sA=
 			</data>
 		</dict>
 		<key>Headers/ScateSDK.h</key>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Egxv7PuL5/WbWYxlEUVDMVIA9Quo/KwXuDcQQWRpagw=
+			/qb9/DMVmhZpzriowkEPM+Ere9Z1d97MWmzRTqrSfBQ=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qzg9lO3Gv03kciZle5o3vUidS5JEzYyKshUDeWlg/Zo=
+			4NzmpCKq/5y6ntaBw5G7CWBr9GQQNueRjGU9AWIawQE=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qzg9lO3Gv03kciZle5o3vUidS5JEzYyKshUDeWlg/Zo=
+			4NzmpCKq/5y6ntaBw5G7CWBr9GQQNueRjGU9AWIawQE=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sV/MY+bSMFF4QqGuUfjHstYGiNqAxUK1/FeOdTrAdHs=
+			QgtGIQCfhIfTW5uH2WGVadDrQyana0d2z47JPYLTBoE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

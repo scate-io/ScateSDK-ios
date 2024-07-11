@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ScateSDK-Swift.h</key>
 		<data>
-		iRqtK2/518SOFsXlDLz6tOpVf2w=
+		edqEtUead76+3rqf89PUCXWaYw0=
 		</data>
 		<key>Headers/ScateSDK.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jWBq08d9JTWZls9ajCwlGDd4SJc=
+		EjeEs/UxGX/DQFUYozw3/edYfJQ=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		p7WERpe3gpNSWWdUtIxacHrd9sg=
+		ZwXsIVQ1Gzic3b9K/E0A02rIDsU=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		p7WERpe3gpNSWWdUtIxacHrd9sg=
+		ZwXsIVQ1Gzic3b9K/E0A02rIDsU=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		wmeZmsqsLlcPnAEzltH8QTEY6Nw=
+		PvDMDHVtAtf0aKd/f/shH0h93Q0=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jWBq08d9JTWZls9ajCwlGDd4SJc=
+		EjeEs/UxGX/DQFUYozw3/edYfJQ=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		xPHMRfO1YQygxwzoqb9sDRvcDok=
+		Wj3j+CsjtjHCmmy/USj4ThTY7OA=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		xPHMRfO1YQygxwzoqb9sDRvcDok=
+		Wj3j+CsjtjHCmmy/USj4ThTY7OA=
 		</data>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1j9JywlWce5EqFicH81aDp2J0KE=
+		ko4Zra0cAyN8rhU+jUKfSVu63uY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j2gn2bvIDR1ZD6sM1Q+h49LOIGhTFyYYvnFhGvYP95U=
+			HQ+xWX5eBGDIgSW1T+zGmpBHE8jiPYeX1y+oPYnhXsw=
 			</data>
 		</dict>
 		<key>Headers/ScateSDK.h</key>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Egxv7PuL5/WbWYxlEUVDMVIA9Quo/KwXuDcQQWRpagw=
+			/qb9/DMVmhZpzriowkEPM+Ere9Z1d97MWmzRTqrSfBQ=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MvcCy5ABE+JWX+/Goev2ZLMz6E+c4Q/K1tw6iI4oi0w=
+			LEYjfxNmVTT7GechRi5y7dMR0Q2EY0YpS8I2c54d4kc=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MvcCy5ABE+JWX+/Goev2ZLMz6E+c4Q/K1tw6iI4oi0w=
+			LEYjfxNmVTT7GechRi5y7dMR0Q2EY0YpS8I2c54d4kc=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d+ZAeJkt2L4dqk9MhpFxtE40F6KqAqgzZbUz+kLmK+c=
+			0U2ErZE5C86Rw/0r0PQDlhXT1oB8UX2Mbmog6hdX/Gk=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Egxv7PuL5/WbWYxlEUVDMVIA9Quo/KwXuDcQQWRpagw=
+			/qb9/DMVmhZpzriowkEPM+Ere9Z1d97MWmzRTqrSfBQ=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qHAopbu8X5T299XzcriiZzhvjtEE2gG79HjElgVHJJ0=
+			SlqefLXtYBs/zyyzsQbU5DqJf37Q0Fo0wN1Y4n87b1c=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qHAopbu8X5T299XzcriiZzhvjtEE2gG79HjElgVHJJ0=
+			SlqefLXtYBs/zyyzsQbU5DqJf37Q0Fo0wN1Y4n87b1c=
 			</data>
 		</dict>
 		<key>Modules/ScateSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GN/eSzJBVDCfRLRfZ0DyWHQ9MQwOYcvSH+4OGqOQgw8=
+			pE/THr+GzeN892TlGqRebcPD/DZWi2gbuvHq/aEDYsg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

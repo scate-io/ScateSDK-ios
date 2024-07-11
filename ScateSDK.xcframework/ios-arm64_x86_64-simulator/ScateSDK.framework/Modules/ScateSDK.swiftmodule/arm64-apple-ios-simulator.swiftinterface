@@ -11,7 +11,13 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class RemoteConfigHelper {
+  public func fetchRemoteConfigs(remoteConfigData: ScateSDK.RemoteConfigData, retryCount: Swift.Int = 0)
+  public func loadConfigsFromLocal() -> [Swift.String : Swift.String]?
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ScateCoreSDK : ObjectiveC.NSObject {
+  @objc public static let RemoteConfigsReady: Foundation.Notification.Name
   @objc public static var debug: Swift.Bool
   @objc public static func Init(appID: Swift.String)
   public static func CurrentTimestamp() -> Swift.UInt64
@@ -23,6 +29,7 @@ import _SwiftConcurrencyShims
   public static func GetUserID() -> Swift.String?
   public static func GetInstallTime() -> Swift.UInt64?
   public static func GetAppID() -> Swift.String?
+  public static func GetRemoteConfig(key: Swift.String, defaultValue: Swift.String) -> Swift.String
   @objc deinit
 }
 public typealias ulid_t = Foundation.uuid_t
@@ -58,6 +65,10 @@ public struct ULID : Swift.Hashable, Swift.Equatable, Swift.Comparable, Swift.Cu
 extension ScateSDK.ULID : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct RemoteConfigData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UIDevice.BatteryState : Swift.Codable {
 }
