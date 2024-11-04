@@ -71,4 +71,88 @@ To send events, you can use the following code:
 
 ```
 
+### Listen Remote Config Ready
+
+```swift
+NotificationCenter.default.addObserver(notificationHandler, 
+                                       selector: #selector(notificationHandler.remoteConfigReady), 
+                                       name: ScateCoreSDK.RemoteConfigsReady, 
+                                       object: nil)
+```
+
+### Get Remote Config for Key
+
+```swift
+ScateSDK.GetRemoteConfig('key', 'defaultValue');
+```
+
+### Onboarding Event Functions
+
+```swift
+ScateCoreSDK.OnboardingStart();
+ScateCoreSDK.OnboardingStep(step: "location_screen");
+ScateCoreSDK.OnboardingStep(step: "notification_screen")
+ScateCoreSDK.OnboardingStep(step: "personalization_screen");
+ScateCoreSDK.OnboardingStep(step: "journey_screen");
+ScateCoreSDK.OnboardingStep(step: "intro_paywall_screen");
+ScateCoreSDK.OnboardingStep(step: "fullscreen_ad");
+ScateCoreSDK.OnboardingFinish();
+```
+
+### Login Event Functions
+
+```swift
+ScateCoreSDK.LoginSuccess(source: "apple") 
+ScateCoreSDK.LoginSuccess(source: "email")
+ScateCoreSDK.LoginSuccess(source: "fb") 
+ScateCoreSDK.LoginSuccess(source: "google")
+```
+
+### Ad Event Functions
+
+```swift
+ScateCoreSDK.InterstitialAdShown()
+ScateCoreSDK.InterstitialAdClosed()
+ScateCoreSDK.RewardedAdShown()
+ScateCoreSDK.RewardedAdClosed()
+ScateCoreSDK.RewardedAdClaimed()
+ScateCoreSDK.BannerAdShown()
+```
+
+### Permission Event Functions
+
+```swift
+ScateCoreSDK.NotificationPermissionGranted()
+ScateCoreSDK.NotificationPermissionDenied()
+ScateCoreSDK.LocationPermissionGranted()
+ScateCoreSDK.LocationPermissionDenied()
+ScateCoreSDK.ATTPromptShown()
+ScateCoreSDK.ATTPermissionGranted()
+ScateCoreSDK.ATTPermissionDenied()
+```
+
+### Paywall Event Functions
+
+```swift
+ScateCoreSDK.PaywallShown(paywall: "paywall_name")
+ScateCoreSDK.PaywallClosed(paywall: "paywall_name")
+ScateCoreSDK.PaywallAttempted(paywall: "paywall_name")
+ScateCoreSDK.PaywallPurchased(paywall: "paywall_name")
+ScateCoreSDK.PaywallCancelled(paywall: "paywall_name")
+```
+
+### Tab And Feature Event Functions
+```swift
+ScateCoreSDK.TabClicked(tab: "x")
+ScateCoreSDK.FeatureClicked(feature: "x")
+```
+
+### Daily Streak Event Functions
+```swift
+ScateCoreSDK.DailyStreakShown()
+ScateCoreSDK.DailyStreakClaimed()
+ScateCoreSDK.DailyStreakClosed()
+```
+
+
 
