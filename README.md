@@ -49,10 +49,19 @@ struct ScateSDKTestApp: App {
         let adid = Adjust.adid()
         ScateCoreSDK.SetAdid(adid: adid);
     }
-    
+
 }
 
 ```
+
+By default, when Firebase Analytics is linked and configured in the host app, ScateSDK sets Firebase `user_id` to the Scate user ID during initialization. If your app already manages Firebase `user_id`, disable this before initialization:
+
+```swift
+let configuration = ScateSDKConfiguration()
+configuration.firebaseUserIdSyncEnabled = false
+ScateCoreSDK.Init(appID: "<your app ID>", configuration: configuration)
+```
+
 ### Send Events
 
 To send events, you can use the following code:
@@ -153,6 +162,4 @@ ScateCoreSDK.DailyStreakShown()
 ScateCoreSDK.DailyStreakClaimed()
 ScateCoreSDK.DailyStreakClosed()
 ```
-
-
 
