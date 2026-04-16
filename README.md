@@ -41,18 +41,25 @@ struct ScateSDKTestApp: App {
     
     init(){
         
-        // ...
-        // It's better to initialize the SDK after Adjust SDK 
-
         ScateCoreSDK.Init(appID: "<your app ID>");
-        // make sure to set adid from Adjust SDK
-        let adid = Adjust.adid()
-        ScateCoreSDK.SetAdid(adid: adid);
+        ScateCoreSDK.InitAdjust(adjustToken: "<your adjust token>")
+
+        ScateCoreSDK.GetAdjustId { adid in
+            // ADID is non-empty here.
+        }
     }
 
 }
 
 ```
+
+By default, `InitAdjust` configures Adjust with a 120 second ATT consent wait interval and requests App Tracking Transparency authorization at init time. Add `NSUserTrackingUsageDescription` to the app Info.plist for the prompt to appear. Pass `noATT: true` to skip ScateSDK's ATT request path:
+
+```swift
+ScateCoreSDK.InitAdjust(adjustToken: "<your adjust token>", noATT: true)
+```
+
+When an ADID is resolved, ScateSDK stores it as the SDK ADID and sends `scate_adjust_id` once after ScateSDK is initialized. If your app already initializes Adjust, avoid calling `InitAdjust` a second time; keep your app-owned Adjust setup and call `ScateCoreSDK.GetAdjustId(...)` after Adjust is ready, or continue to use `ScateCoreSDK.SetAdid(adid:)`.
 
 By default, when Firebase Analytics is linked and configured in the host app, ScateSDK sets Firebase `user_id` to the Scate user ID during initialization. If your app already manages Firebase `user_id`, disable this before initialization:
 
@@ -162,4 +169,3 @@ ScateCoreSDK.DailyStreakShown()
 ScateCoreSDK.DailyStreakClaimed()
 ScateCoreSDK.DailyStreakClosed()
 ```
-
