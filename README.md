@@ -1,5 +1,27 @@
 ### Installation 
 
+#### Swift Package Manager
+
+In Xcode, go to **File → Add Package Dependencies…** and enter the package URL:
+
+```
+https://github.com/scate-io/ScateSDK-ios
+```
+
+Set the **Dependency Rule** to **Up to Next Major Version** from `7.0.14`, then add the **ScateSDK** library product to your app target.
+
+Or add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/scate-io/ScateSDK-ios", from: "7.0.14")
+]
+```
+
+and depend on the `ScateSDK` product in your target.
+
+The Adjust SDK (with the Google ODM plugin) is linked automatically as a dependency of the package — you don't need to add Adjust separately.
+
 #### CocoaPods
 
 Add following into your Podfile:
