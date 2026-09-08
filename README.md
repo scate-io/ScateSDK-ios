@@ -8,13 +8,13 @@ In Xcode, go to **File → Add Package Dependencies…** and enter the package U
 https://github.com/scate-io/ScateSDK-ios
 ```
 
-Set the **Dependency Rule** to **Up to Next Major Version** from `7.0.17`, then add the **ScateSDK** library product to your app target.
+Set the **Dependency Rule** to **Up to Next Major Version** from `7.0.18`, then add the **ScateSDK** library product to your app target.
 
 Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/scate-io/ScateSDK-ios", from: "7.0.17")
+    .package(url: "https://github.com/scate-io/ScateSDK-ios", from: "7.0.18")
 ]
 ```
 
