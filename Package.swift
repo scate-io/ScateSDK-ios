@@ -30,8 +30,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ScateSDK",
-            url: "https://github.com/scate-io/ScateSDK-ios/releases/download/v7.0.18/ScateSDK.xcframework-v7.0.18.zip",
-            checksum: "f0108eeb4f590e222055e2a62e0aa5fa865e27e204e18da58e5229befef6da1e"
+            url: "https://github.com/scate-io/ScateSDK-ios/releases/download/v7.0.19/ScateSDK.xcframework-v7.0.19.zip",
+            checksum: "817d572512d4e483f4921bd40b2e810e4a4a558be9255209d346c203a5c57abc"
         ),
         .target(
             name: "ScateSDKAdjust",
