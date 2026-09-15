@@ -81,7 +81,7 @@ struct ScateSDKTestApp: App {
 
 ```
 
-Do not read remote configs or show the first screen before the listener fires. `Init` returns immediately and never blocks on the network, so without this gate the app can render before any config has arrived. The listener always fires, `true` on a fresh fetch and `false` once retries are exhausted. A failing network is retried several times first, so if a slow network must not hold the splash, cap the wait at around five seconds and continue with cached or default values; a late answer still reaches the listener either way.
+Do not read remote configs or show the first screen before the listener fires. `Init` returns immediately and never blocks on the network, so without this gate the app can render before any config has arrived. The listener always fires, `true` on a fresh fetch and `false` once retries are exhausted. A failing network is retried several times first, so if a slow network must not hold the splash, cap the wait at around five seconds and continue with cached or default values; a late answer still reaches the listener either way. The listener body is a callback, not a pause: `Init` and every line after it run straight away, and the body runs later, on its own, when the answer arrives. Put the config reads and the move off the splash screen inside the body.
 
 By default, `InitAdjust` configures Adjust with a 120 second ATT consent wait interval and requests App Tracking Transparency authorization at init time. Add `NSUserTrackingUsageDescription` to the app Info.plist for the prompt to appear. Pass `noATT: true` to skip ScateSDK's ATT request path:
 
