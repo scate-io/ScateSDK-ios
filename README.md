@@ -113,11 +113,40 @@ To send events, you can use the following code:
 
 ```
 
+### Send Events with Parameters
+
+Pass a dictionary as the optional `parameters` argument. These values are sent as event `parameters`.
+
+```swift
+
+    let parameters: [String: Any] = [
+        "screen": "paywall",
+        "position": 1,
+        "isPrimary": true
+    ]
+    ScateCoreSDK.Event(name: "button_clicked", parameters: parameters as NSDictionary)
+
+```
+
 ### Send Events with Additional Data
 
 ```swift
 
     ScateCoreSDK.Event(name: "button_click", customValue: "subscribe_btn");
+
+```
+
+### Send Events with a Custom Value and Parameters
+
+Send a `customValue` and a `parameters` dictionary together in a single event.
+
+```swift
+
+    ScateCoreSDK.Event(
+        name: "result",
+        customValue: "grade_changed",
+        parameters: ["grade": "PSA10"] as NSDictionary
+    )
 
 ```
 
@@ -134,6 +163,14 @@ NotificationCenter.default.addObserver(notificationHandler,
 
 ```swift
 ScateSDK.GetRemoteConfig('key', 'defaultValue');
+```
+
+Typed reads fall back to the default when the value is not of that type.
+
+```swift
+let enabled = ScateCoreSDK.GetRemoteConfigBool(key: "new_camera", defaultValue: false)
+let limit = ScateCoreSDK.GetRemoteConfigInt(key: "scan_limit", defaultValue: 10)
+let ratio = ScateCoreSDK.GetRemoteConfigDouble(key: "crop_ratio", defaultValue: 1.5)
 ```
 
 ### Onboarding Event Functions
