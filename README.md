@@ -72,12 +72,12 @@ struct ScateSDKTestApp: App {
         ScateCoreSDK.Init(appID: "<your app ID>");
         ScateCoreSDK.InitAdjust(adjustToken: "<your adjust token>")
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            AppStartup.scateConfigsReady()
-        }
-
         ScateCoreSDK.GetAdjustId { adid in
             // ADID is non-empty here.
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            AppStartup.scateConfigsReady()
         }
     }
 
@@ -85,7 +85,7 @@ struct ScateSDKTestApp: App {
 
 ```
 
-`AppStartup.scateConfigsReady()` is your own one-shot handler: whichever comes first, the listener or the timeout, wins and later calls do nothing. Read remote configs and leave the splash screen there. `Init` returns immediately and never blocks on the network, so without this gate the first screen can render before any config has arrived.
+Do not read remote configs or show the first screen before the listener fires. `Init` returns immediately and never blocks on the network, so without this gate the app can render before any config has arrived. The timeout keeps a slow network from holding the splash. `AppStartup.scateConfigsReady()` is your own handler and runs once: whichever of the listener or the timeout comes first wins. Read the configs and leave the splash screen there.
 
 By default, `InitAdjust` configures Adjust with a 120 second ATT consent wait interval and requests App Tracking Transparency authorization at init time. Add `NSUserTrackingUsageDescription` to the app Info.plist for the prompt to appear. Pass `noATT: true` to skip ScateSDK's ATT request path:
 
