@@ -53,6 +53,8 @@ Install the pod:
 
 In your AppDelegate.swift file, import the ScateSDK module and initialize the SDK with your app ID in the `application(_:didFinishLaunchingWithOptions:)` method: or `init()` method of your main struct if you are using SwiftUI.
 
+Register the remote config listener before initializing. It fires once per initialization and is not replayed, so a listener registered afterwards never sees it.
+
 ```swift
 
 import SwiftUI
@@ -63,6 +65,10 @@ struct ScateSDKTestApp: App {
     
     init(){
         
+        NotificationCenter.default.addObserver(forName: ScateCoreSDK.RemoteConfigsReady, object: nil, queue: .main) { _ in
+            // Remote configs are ready. Read them, then continue app startup.
+        }
+
         ScateCoreSDK.Init(appID: "<your app ID>");
         ScateCoreSDK.InitAdjust(adjustToken: "<your adjust token>")
 
@@ -74,6 +80,8 @@ struct ScateSDKTestApp: App {
 }
 
 ```
+
+Continue app startup — reading remote configs, leaving the splash screen — only after the listener fires. Add a timeout so a slow network cannot hold the splash.
 
 By default, `InitAdjust` configures Adjust with a 120 second ATT consent wait interval and requests App Tracking Transparency authorization at init time. Add `NSUserTrackingUsageDescription` to the app Info.plist for the prompt to appear. Pass `noATT: true` to skip ScateSDK's ATT request path:
 
