@@ -66,7 +66,7 @@ struct ScateSDKTestApp: App {
     init(){
         
         NotificationCenter.default.addObserver(forName: ScateCoreSDK.RemoteConfigsReady, object: nil, queue: .main) { _ in
-            AppStartup.scateConfigsReady()
+            // Remote configs are ready. Read them and leave the splash screen here.
         }
 
         ScateCoreSDK.Init(appID: "<your app ID>");
@@ -81,7 +81,7 @@ struct ScateSDKTestApp: App {
 
 ```
 
-Do not read remote configs or show the first screen before the listener fires. `Init` returns immediately and never blocks on the network, so without this gate the app can render before any config has arrived. The listener always fires, `true` on a fresh fetch and `false` once retries are exhausted. A failing network is retried several times first, so if a slow network must not hold the splash, cap the wait at around five seconds and continue with cached or default values; a late answer still reaches the listener either way. `AppStartup.scateConfigsReady()` is your own handler: read the configs and leave the splash screen there.
+Do not read remote configs or show the first screen before the listener fires. `Init` returns immediately and never blocks on the network, so without this gate the app can render before any config has arrived. The listener always fires, `true` on a fresh fetch and `false` once retries are exhausted. A failing network is retried several times first, so if a slow network must not hold the splash, cap the wait at around five seconds and continue with cached or default values; a late answer still reaches the listener either way.
 
 By default, `InitAdjust` configures Adjust with a 120 second ATT consent wait interval and requests App Tracking Transparency authorization at init time. Add `NSUserTrackingUsageDescription` to the app Info.plist for the prompt to appear. Pass `noATT: true` to skip ScateSDK's ATT request path:
 
