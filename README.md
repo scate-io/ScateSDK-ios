@@ -107,9 +107,10 @@ app links Firebase Analytics, new purchases are also logged to Firebase as `in_a
 Firebase already logs by itself (StoreKit 1, or completed outside the purchase call) are left to Firebase. Nothing to
 add or call; do not also log purchases to Firebase yourself, or each one is counted twice.
 
-If your app sells consumables (credits, coins), set `SKIncludeConsumableInAppPurchaseHistory` to `YES` in your
-`Info.plist`. Without it StoreKit drops a consumable from the history once it is finished, and ScateSDK never sees
-that purchase (iOS 18 and later).
+Add `SKIncludeConsumableInAppPurchaseHistory` = `YES` to your `Info.plist`. It is required if the app sells
+consumables (credits, coins): without it StoreKit drops a consumable from the history once it is finished, and
+ScateSDK never sees that purchase (iOS 18 and later). We recommend it for every app: it is one line, changes
+nothing for subscriptions and non-consumables, and covers consumables added later.
 
 ### Send Events
 
