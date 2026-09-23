@@ -1,0 +1,15 @@
+Pod::Spec.new do |s|
+    s.name         = "ScateSDKFirebase"
+    s.version      = "RELEASE_VERSION"
+    s.summary      = "Logs the purchases ScateSDK notices to Firebase Analytics. Add it next to ScateSDK in an app that uses Firebase."
+    s.homepage     = "https://github.com/scate-io/ScateSDK-ios.git"
+    s.license = { :type => "MIT", :file => "LICENSE" }
+    s.author             = { "Scate" => "e@inscate.com" }
+    s.source       = { :git => "https://github.com/scate-io/ScateSDK-ios.git", :tag => "vRELEASE_VERSION" }
+    s.source_files = "Sources/ScateSDKFirebase/*.swift"
+    s.dependency "ScateSDK", "RELEASE_VERSION"
+    # Analytics.logTransaction; 12.5.0 is the version Firebase's docs name for manual in-app purchase logging
+    s.dependency "FirebaseAnalytics", ">= 12.5.0"
+    s.ios.deployment_target = '15.0'
+    s.swift_version = '5.0'
+end

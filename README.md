@@ -47,6 +47,21 @@ Install the pod:
 ```
 
 
+#### Firebase
+
+If your app uses Firebase Analytics, add `ScateSDKFirebase` next to `ScateSDK`. ScateSDK then logs the purchases it
+notices to Firebase as `in_app_purchase`, through Firebase's `Analytics.logTransaction`. No code is needed: ScateSDK
+finds the module when it initializes. It needs FirebaseAnalytics 12.5.0 or later and iOS 15.
+
+```ruby
+    pod 'ScateSDK'
+    pod 'ScateSDKFirebase'
+```
+
+Do not also call `Analytics.logTransaction` in your own code, or every purchase is counted twice. An app without
+Firebase leaves `ScateSDKFirebase` out.
+
+
 #### Usage
 
 ### Initialize the SDK
@@ -98,6 +113,16 @@ let configuration = ScateSDKConfiguration()
 configuration.firebaseUserIdSyncEnabled = false
 ScateCoreSDK.Init(appID: "<your app ID>", configuration: configuration)
 ```
+
+### Purchases
+
+ScateSDK notices purchases on its own; the app does not report them. Every time the app becomes active it sends
+StoreKit's transaction history to Scate, which keeps the purchases it has not seen before (iOS 15 and later). With
+`ScateSDKFirebase` linked, new purchases are also logged to Firebase as `in_app_purchase` (see Installation).
+
+If your app sells consumables (credits, coins), set `SKIncludeConsumableInAppPurchaseHistory` to `YES` in your
+`Info.plist`. Without it StoreKit drops a consumable from the history once it is finished, and ScateSDK never sees
+that purchase (iOS 18 and later; below iOS 18 consumables are not listed at all).
 
 ### Send Events
 
