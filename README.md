@@ -99,6 +99,19 @@ configuration.firebaseUserIdSyncEnabled = false
 ScateCoreSDK.Init(appID: "<your app ID>", configuration: configuration)
 ```
 
+### Purchases
+
+ScateSDK notices purchases on its own; the app does not report them. Every time the app becomes active it sends
+StoreKit's transaction history to Scate, which keeps the purchases it has not seen before (iOS 15 and later). When the
+app links Firebase Analytics, new purchases are also logged to Firebase as `in_app_purchase`, once each: purchases
+Firebase already logs by itself (StoreKit 1, or completed outside the purchase call) are left to Firebase. Nothing to
+add or call; do not also log purchases to Firebase yourself, or each one is counted twice.
+
+Add `SKIncludeConsumableInAppPurchaseHistory` = `YES` to your `Info.plist`. It is required if the app sells
+consumables (credits, coins): without it StoreKit drops a consumable from the history once it is finished, and
+ScateSDK never sees that purchase (iOS 18 and later). We recommend it for every app: it is one line, changes
+nothing for subscriptions and non-consumables, and covers consumables added later.
+
 ### Send Events
 
 To send events, you can use the following code:
